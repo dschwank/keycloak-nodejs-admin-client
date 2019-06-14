@@ -164,6 +164,7 @@ export declare class Clients extends Resource<{
     }) => Promise<void>;
     constructor(client: KeycloakAdminClient);
     findProtocolMapperByName(payload: {
+        realm?: string;
         id: string;
         name: string;
     }): Promise<ProtocolMapperRepresentation>;

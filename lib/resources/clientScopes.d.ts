@@ -5,7 +5,7 @@ import ProtocolMapperRepresentation from '../defs/protocolMapperRepresentation';
 export declare class ClientScopes extends Resource<{
     realm?: string;
 }> {
-    find: (payload?: void & {
+    find: (payload?: {
         realm?: string;
     }) => Promise<ClientScopeRepresentation[]>;
     create: (payload?: ClientScopeRepresentation & {
@@ -93,12 +93,15 @@ export declare class ClientScopes extends Resource<{
     }) => Promise<void>;
     constructor(client: KeycloakAdminClient);
     findOneByName(payload: {
+        realm?: string;
         name: string;
     }): Promise<ClientScopeRepresentation>;
     delByName(payload: {
+        realm?: string;
         name: string;
     }): Promise<void>;
     findProtocolMapperByName(payload: {
+        realm?: string;
         id: string;
         name: string;
     }): Promise<ProtocolMapperRepresentation>;
